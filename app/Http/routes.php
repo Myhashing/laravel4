@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::group(['middleware' => ['web']], function () {
+    Route::get('/suppliers','SupplierController@index');
+    Route::post('/suppliers','SupplierController@store');
+    Route::delete('/suppliers/{id}','SupplierController@destroy');
+
+
+});
+
