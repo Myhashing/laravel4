@@ -19,6 +19,10 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('/suppliers','SupplierController@store');
     Route::delete('/suppliers/{id}','SupplierController@destroy');
 
+    Route::get('/products','ProductController@index');
+    Route::post('/products','ProductController@store');
+    Route::delete('/products/{id}','ProductController@destroy');
+
 
 });
 

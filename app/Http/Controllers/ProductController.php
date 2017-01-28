@@ -41,9 +41,11 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+
         $product= new Product;
+
         $product->name= $request->name;
-        $product->supplier_id= $request->supplier_id;
+        $product->supplier_id= $request->supplier[0];
         $product->save();
         return redirect('/products');
 
@@ -92,6 +94,7 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Product::findOrFail($id)->delete();
+        return redirect('/products');
     }
 }
