@@ -27,7 +27,7 @@
                                 <td class="table-text">
                                    Supplier Web:  {{ $supplier->web }}
                                 </td>
-                               <!-- related products Show Button-->
+                               <!-- related products Show Button
                                 <td>
                                     <form action="/suppliers/products/" method="post">
                                         {{ csrf_field() }}
@@ -37,7 +37,7 @@
 
                                             show related products</button>
                                     </form>
-                                </td>
+                                </td> -->
 
                             </tr>
                                 </tbody>
@@ -49,6 +49,7 @@
                 </div>
             </div>
         </div>
+        <!-- PRODUCTS CATALOG-->
         @foreach($supplier->products as $product)
         <div class="col-lg-3 col-md-4 col-xs-6 thumb">
             <a class="thumbnail" href="#">

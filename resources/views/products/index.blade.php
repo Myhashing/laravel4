@@ -71,6 +71,15 @@
                                             @endif
                                         @endforeach
                                 </td>
+                                <!-- Product show Button-->
+                                <td>
+                                    <form action="/products/{{ $product->id }}" method="get">
+                                        {{ csrf_field() }}
+                                        <button type="submit" class="btn btn-info">
+                                            <i class="fa fa-btn fa-box"></i>
+                                            show Product</button>
+                                    </form>
+                                </td>
                                 <!-- Product Delete Button-->
                                 <td>
                                     <form action="/products/{{ $product->id }}" method="POST">

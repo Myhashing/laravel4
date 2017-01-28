@@ -23,6 +23,7 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/products','ProductController@index');
     Route::post('/products','ProductController@store');
+    Route::get('/products/{id}','ProductController@show');
     Route::delete('/products/{id}','ProductController@destroy');
 
 
