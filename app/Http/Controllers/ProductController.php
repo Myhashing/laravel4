@@ -46,6 +46,7 @@ class ProductController extends Controller
 
         $product->name= $request->name;
         $product->supplier_id= $request->supplier[0];
+        $product->web_link = $request->web_link;
         $product->save();
         return redirect('/products');
 

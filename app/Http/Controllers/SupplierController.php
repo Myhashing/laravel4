@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
 use App\Supplier;
 use Illuminate\Http\Request;
 
@@ -53,9 +54,20 @@ class SupplierController extends Controller
      */
     public function show($id)
     {
-        //
+        $supplier=Supplier::findOrFail($id);
+        return view('suppliers.show',['supplier'=>$supplier]);
+
     }
 
+    public function showProducts(Supplier $supplier){
+       /* $products=
+        $products = Product::where('supplier_id', $request->supplier()->id)->get();
+
+        return view('tasks.index', [
+            'tasks' => $tasks,
+        ]);*/
+
+    }
     /**
      * Show the form for editing the specified resource.
      *

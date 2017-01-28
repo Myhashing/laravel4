@@ -21,7 +21,7 @@
                     <div class="form-group">
                         <label for="product-web" class="col-sm-3 control-label"> Product Web</label>
                         <div class="col-sm-6">
-                            <input type="text" name="web" id="product-web" class="form-control">
+                            <input type="text" name="web_link" id="product-web" class="form-control">
                         </div>
                     </div>
                     <div class="form-group">
@@ -62,7 +62,7 @@
                                     <div>Product name : {{ $product->name }}</div>
                                 </td>
                                 <td class="table-text">
-                                   Product Web:  {{ $product->web }}
+                                   Product Web:  {{ $product->web_link }}
                                 </td>
                                 <td class="table-text">
                                     @foreach($supplierList as $supplier)

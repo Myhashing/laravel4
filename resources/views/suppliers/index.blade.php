@@ -55,6 +55,17 @@
                                 <td class="table-text">
                                    Supplier Web:  {{ $supplier->web }}
                                 </td>
+                                <!-- Supplier Show Button-->
+                                <td>
+                                    <form action="/suppliers/{{ $supplier->id }}" method="get">
+                                        {{ csrf_field() }}
+                                        {{ method_field('show') }}
+
+                                        <button type="submit" class="btn btn-info">
+
+                                            show Supplier</button>
+                                    </form>
+                                </td>
                                 <!-- Supplier Delete Button-->
                                 <td>
                                     <form action="/suppliers/{{ $supplier->id }}" method="POST">

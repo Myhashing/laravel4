@@ -16,6 +16,7 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->integer('supplier_id');
+            $table->text('web_link');
             $table->timestamps();
         });
     }

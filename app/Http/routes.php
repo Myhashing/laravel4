@@ -17,6 +17,8 @@ Route::get('/', function () {
 Route::group(['middleware' => ['web']], function () {
     Route::get('/suppliers','SupplierController@index');
     Route::post('/suppliers','SupplierController@store');
+    Route::get('/suppliers/{id}','SupplierController@show');
+    Route::post('/suppliers/products','SupplierController@showProducts');
     Route::delete('/suppliers/{id}','SupplierController@destroy');
 
     Route::get('/products','ProductController@index');
